@@ -1,0 +1,107 @@
+/* 搜索框和美丽说logo层 */
+.search-nav{
+    margin-top: 26px;
+    height: 144px;
+    /* background-color: red; */
+    position: relative;
+}
+/* 左侧美丽说logo */
+.search-nav .logo{
+    margin-top: 10px;
+    width: 360px;
+}
+.search-nav .logo .logo-link{
+    background: url(../images/logo.png);
+    width: 200px;
+    height: 50px;
+    display:inline-block;
+    background-size: 205px;
+}
+/* 搜索框和小字商品分类导航 */
+.search-nav .search-box{
+
+}
+/* 搜索框和小字商品分类导航上部分 */
+.search-nav .search-box .top{
+    overflow: hidden;
+}
+.search-nav .search-box .top .switch{
+    width: 55px;
+    height: 25px;
+    background-color: #f2f2f2;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+.search-nav .search-box .top .switch-on{
+    background-color: #ff0061;
+    color: white;
+}
+/* 搜索框和小字商品分类导航中间部分 */
+.search-nav .search-box .middle{
+    overflow: hidden;
+}
+.search-nav .search-box .middle .search-input{
+    width: 436px;
+    height: 26px;
+    padding-left: 10px;
+    border: 2px solid #ff0061;
+}
+.search-nav .search-box .middle .btn-search{
+    height: 30px;
+    width: 72px;
+    /* background-color: #ff0061; */
+    background: #ff0061 url(../images/fangdajing.png) 26px 7px no-repeat;
+    cursor: pointer;
+}
+/* 搜索框和小字商品分类导航下部分 */
+.search-nav .search-box .bottom{
+    margin-top: 12px;
+}
+.search-nav .search-box .bottom ul{
+    width: 513px;
+}
+.search-nav .search-box .bottom ul li{
+
+}
+.search-nav .search-box .bottom ul li a:hover{
+    color: #666666;
+}
+.search-nav .search-box .bottom ul li .pink{
+    color: #f36;
+}
+.search-nav .search-box .bottom ul li .pink:hover{
+    color: #f36;
+}
+/* 右侧客户端下载二维码 */
+.search-nav .down-qr{
+    position: absolute;
+    top: -25px;
+    right: 0px;
+}
+.title-nav{
+    border-bottom: 1px solid #dedede;
+    height: 32px;
+}
+.title-nav .main-nav{
+
+}
+.title-nav .main-nav ul{
+}
+.title-nav .main-nav ul li{
+    width: 108px;
+}
+.title-nav .main-nav ul li a{
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    padding-bottom: 8px;
+}
+.title-nav .main-nav ul li:nth-child(1) a{
+    color: #f36;
+    border-bottom: 2px solid #f36;
+}
+.title-nav .main-nav ul li:hover a{
+    color: #f36;
+    border-bottom: 2px solid #f36;
+}

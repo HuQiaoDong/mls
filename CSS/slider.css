@@ -1,0 +1,64 @@
+
+.banner{
+    margin-top: 10px;
+}
+.container{
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+.container .list{
+    position: absolute;
+    left: -1200px;
+    width: 9600px;
+    height: 400px;
+}
+.container .list .picture{
+    width: 1200px;
+    height: 400px;;
+    float: left;
+}
+.container .buttons{
+    position: absolute;
+    z-index: 2;
+    bottom: 12px;
+    width: 130px;
+    height: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.container .buttons .btn{
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    float: left;
+    margin: 0px 5px;
+    border-radius: 10px;
+    /* 鼠标移入带小手手样式 */
+    cursor: pointer;
+    
+}
+.container .buttons .on{
+    width: 20px;
+}
+.container a{
+    font-size: 50px;
+    color: #888888;
+    z-index: 2;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 36px;
+    height: 44px;
+}
+.container .back{
+    background: url(../images/prev.png);
+    left: 0px;
+}
+.container .next{
+    background: url(../images/next.png);
+    right: 0px;
+}

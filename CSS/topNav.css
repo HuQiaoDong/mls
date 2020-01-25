@@ -1,0 +1,106 @@
+/* 最顶部导航容器 */
+.header-container{
+    background-color: #f8f8f8;
+}
+/* 顶部版心盒子 */
+.header{
+    height: 32px;
+    line-height: 32px;
+}
+/* 导航内容 */
+.header ul{
+    width: 911px;
+}
+/* 顶部导航栏每栏基本样式 */
+.header ul li a{
+    display: block;
+    height: 20px;
+    border-right: 1px dotted #cccccc;
+    padding: 0px 18px;
+    margin: 6px 0px;
+    line-height: 20px;
+    /* color: #666666; */
+}
+/* 顶部导航栏图标 */
+.header ul li a span{
+    background: url(../images/top_nav.png) no-repeat;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+    vertical-align: -4px;
+}
+/* 微信登录 */
+.header ul li a .wechat{
+    background-position: -25px 0px;
+}
+/* qq登录 */
+.header ul li a .qq{
+    background-position: -50px 0px;
+}
+/* 我的收藏 */
+.header ul li a .favorite{
+    background-position: -75px 0px;
+}
+/* 购物车 */
+.header ul li a .shoppingCart{
+    width: 20px;
+    height: 20px;
+    background-position: -100px 0px;
+    vertical-align: -6px;
+}
+/* 我的订单 */
+.header ul li a .olderList{
+    background-position: -125px 0px;
+}
+/* 帮助中心 */
+.header ul li a .help{
+    background-position: -175px 0px;
+    margin: 0px 0px 0px 9px;
+}
+.clear-border{
+    border: none !important;
+}
+/* 我的收藏外盒子 */
+.header ul li:nth-child(5){
+    position: relative;
+}
+.header ul li:nth-child(5):hover .fav-drop{
+    display: block;
+}
+.header ul li:nth-child(8){
+    position: relative;
+}
+.header ul li:nth-child(8):hover .help-drop{
+    display: block;
+}
+/* 我的收藏下拉框 */
+.header ul li:nth-child(5) .fav-drop{
+    width: 88px;
+    height: 39px;
+}
+/* 帮助中心下拉框 */
+.header ul li:nth-child(8) .help-drop{
+    width: 85px;
+    height: 58px;
+}
+/* 下拉框的公共样式 */
+.fav-drop,.help-drop{
+    z-index: 2;
+    position: absolute;
+    background-color: #f8f8f8;
+    border: 1px solid #f3f3f3;
+    display: none;
+    padding: 5px 0px;
+    top: 32px;
+    left: 0px;
+}
+/* 两个下拉框中a标签的样式覆盖 */
+.header ul li:nth-child(5) .fav-drop a,
+.header ul li:nth-child(8) .help-drop a{
+    border: none;
+    line-height: 20px;
+    margin: 0;
+    height: 20px;
+}
+

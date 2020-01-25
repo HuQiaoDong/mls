@@ -1,0 +1,84 @@
+/* css默认样式定义 */
+
+/* 去除默认边距 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 初始化文字大小和字体 */
+body{
+    font-size: 12px;
+    font-family: "微软雅黑","宋体";
+    position: relative;
+    color: #666666;
+}
+/* 版心类 */
+.wrap{
+    margin: auto;
+    width: 1200px;
+}
+/* 去除所有a标签下划线 */
+a{
+    text-decoration: none;
+}
+/* 网站的主题色 */
+a:link,a:visited{
+    color: #666666;
+}
+a:hover{
+    color: #f36;
+}
+/* 清除列表基本样式 */
+li{
+    list-style: none;
+}
+/* 清除i标签斜体样式，用于字体图标 */
+i{
+    font-style: normal;
+}
+/* 左浮动 */
+.fl{
+    float: left;
+}
+/* 右浮动 */
+.fr{
+    float: right;
+}
+/* 弹性水平布start */
+.flex-row{
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
+}
+/* 弹性水平布between */
+.flex-row-b{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+/* 去除图片自带底部缝隙 */
+img{
+    vertical-align: bottom;
+}
+/* 去除输入框自带边框线 */
+input{
+    outline: none;
+}
+/* 引用字体图标 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+    url('iconfont.woff') format('woff'),
+    url('iconfont.ttf') format('truetype'),
+    url('iconfont.svg#iconfont') format('svg');
+}
+/*定义使用iconfont的样式*/
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* transform: rotate()对行内元素无效，行内块和块级元素有效 */

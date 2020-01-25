@@ -1,0 +1,192 @@
+.four-boxs{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.four-boxs ul li a img{
+    width: 300px;
+    height: 170px;
+}
+/* 主要商品内容层 */
+.main{
+    position: relative;
+}
+/* 商品主内容层标题栏 */
+.main .title-one{
+    margin-bottom: 30px;
+    height: 28px;
+}
+/* 标题栏中间两个导航 */
+.main .title-one .center-nav{
+    margin-left: 475px;
+    width: 205px;
+}
+.main .title-one .center-nav a{
+    font-size: 20px;
+    color: black;
+}
+.main .title-one .center-nav a:nth-child(1)::after,
+.main .title-one .center-nav a:nth-child(2)::after{
+    content: "";
+    width: 38px;
+    margin: 5px auto;
+    border-bottom: 3px solid #f36;
+    /* display: none; */
+}
+.main .title-one .center-nav a:nth-child(1)::after{
+    display: block;
+}
+.main .title-one .center-nav .layer-now{
+    color: #f36;
+}
+.main .title-one .center-nav a:nth-child(2)::after{
+    display: none;
+}
+.main .title-one .center-nav a:hover::after{
+    display: block;
+}
+.main .title-one .center-nav a:hover{
+    color: #f36;
+}
+.main .title-one .right-link{
+
+}
+.main .title-one .right-link a{
+    font-size: 14px;
+}
+/* 第一层商品层 */
+.main .shopping-layer{
+    /* display: none; */
+}
+/* 第二层商品层（默认隐藏） */
+.main .shopping-layer-overed{
+    display: none;
+}
+/* 商品展示图片尺寸处理 */
+.main .shopping-layer img,.main .shopping-layer-overed img{
+    width: 224px;
+    height: 340px;
+}
+/* 商品上层下层的留白 */
+.main .shopping-layer .top-layer,.main .shopping-layer-overed .top-layer{
+    margin-bottom: 20px;
+}
+.main .title-two{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.main .title-two .left{
+
+}
+.main .title-two .left h3{
+    font-size: 20px;
+}
+.main .title-two .right{
+ss
+}
+.main .title-two .right a{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.main .shopping-layer-two{
+    margin-bottom: 30px;
+}
+.three-boxes{
+    border: 1px solid #eeeeee;
+    padding-bottom: 10px;
+    /* position: relative; */
+}
+.three-boxes .top-img{
+    position: relative;
+    display: inline-block;
+}
+.three-boxes .top-img div{
+    position: absolute;
+    width: 100px;
+    bottom: 45px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    color: white;
+    font-size: 18px;
+}
+.three-boxes .top-img div span{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-left: 5px solid white;
+    margin-bottom: 1px;
+}
+.three-boxes .top-img div p{
+    display: inline-block;
+    
+}
+.first-box::after,.second-box::after,.third-box::after{
+    content: "50款商品";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: white;
+    font-weight: bold;
+}
+.main .shopping-layer-two img{
+    width: 390px;
+    height: 210px
+}
+.main .shopping-layer-two  .bottom{
+    margin-top: 17px;
+    padding: 0px 5px;
+    text-align: center;
+}
+.main .shopping-layer-two  .bottom a{
+    display: block;
+}
+.main .shopping-layer-two  .bottom img{
+    width: 114px;
+    height: 130px;
+    margin-bottom: 5px;
+}
+/* 商品组件*/
+.goods-box{
+    width: 224px;
+    height: 397px;
+}
+.goods-box .top{
+    display: block;
+}
+.goods-box .middle{
+    margin-top: 10px;
+}
+.goods-box .middle .left{
+    font-size: 16px;
+    color: #f36;
+}
+.goods-box .middle .right{
+    font-size: 14px;
+    color: #999;
+}
+.goods-box .middle .right span:nth-child(1){
+    background: url(../images/wjx.png) no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    background-size: 14px;
+}
+.goods-box .bottom{
+    margin-top: 8px;
+}
+.goods-box .bottom span{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+    /* display: inline-block; */
+}
+.goods-box .bottom img{
+    width: 39px;
+    height: 17px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+/* 商品组件 */
