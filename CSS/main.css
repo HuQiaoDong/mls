@@ -24,39 +24,37 @@
     font-size: 20px;
     color: black;
 }
-.main .title-one .center-nav a:nth-child(1)::after,
-.main .title-one .center-nav a:nth-child(2)::after{
-    content: "";
+.main .title-one .center-nav a .line-on{
     width: 38px;
     margin: 5px auto;
     border-bottom: 3px solid #f36;
-    /* display: none; */
 }
-.main .title-one .center-nav a:nth-child(1)::after{
-    display: block;
-}
+/* 当前商品层对应导航按钮高亮 */
 .main .title-one .center-nav .layer-now{
     color: #f36;
 }
-.main .title-one .center-nav a:nth-child(2)::after{
-    display: none;
-}
-.main .title-one .center-nav a:hover::after{
+/* 当前商品层对应导航按钮下划线出现 */
+.main .title-one .center-nav .layer-now span{
     display: block;
 }
+/* 鼠标移入的商品层导航按钮下划线样式 */
+.main .title-one .center-nav a:hover span{
+    display: block;
+    width: 38px;
+    margin: 5px auto;
+    border-bottom: 3px solid #f36;
+}
+/* 鼠标移入的商品层导航按钮高亮 */
 .main .title-one .center-nav a:hover{
     color: #f36;
-}
-.main .title-one .right-link{
-
 }
 .main .title-one .right-link a{
     font-size: 14px;
 }
 /* 第一层商品层 */
-.main .shopping-layer{
-    /* display: none; */
-}
+    /* .main .shopping-layer{
+        display: none;
+    } */
 /* 第二层商品层（默认隐藏） */
 .main .shopping-layer-overed{
     display: none;
@@ -81,7 +79,6 @@
     font-size: 20px;
 }
 .main .title-two .right{
-ss
 }
 .main .title-two .right a{
     display: inline-block;

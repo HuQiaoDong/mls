@@ -2,6 +2,8 @@
 let btnSwitch=document.getElementsByClassName("switch");
 // 商品层顶部两个导航按钮
 let goodsLayerBtn=document.getElementsByClassName("layer-nav");
+// 商品层顶部两个导航按钮下面的下划线
+let underline=document.getElementsByClassName("underline");
 // 商品层第一层
 let outGoodsLayer=document.getElementById("out-layer");
 // 商品层第二层
@@ -20,6 +22,8 @@ goodsLayerBtn[0].onclick=function(){
     // 如果商品层第一个导航按钮被按下,添加被选中样式，移除第二个导航按钮的被选中样式
     goodsLayerBtn[0].classList.add("layer-now");
     goodsLayerBtn[1].classList.remove("layer-now");
+    underline[0].classList.add("line-on");
+    underline[1].classList.remove("line-on");
     // 显示商品层第一层
     outGoodsLayer.style.display="block";
     // 隐藏商品层第二层
@@ -29,6 +33,8 @@ goodsLayerBtn[1].onclick=function(){
     // 如果商品层第二个导航按钮被按下,添加被选中样式，移除第一个导航按钮的被选中样式
     goodsLayerBtn[1].classList.add("layer-now");
     goodsLayerBtn[0].classList.remove("layer-now");
+    underline[1].classList.add("line-on");
+    underline[0].classList.remove("line-on");
     // 隐藏商品层第一层
     outGoodsLayer.style.display="none";
     // 显示商品层第二层
