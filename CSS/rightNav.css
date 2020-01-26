@@ -62,13 +62,23 @@
     background-color: #ff0061;
     color: white;
 }
-.right-nav ul li a i{
-
+.right-nav ul li a:hover i{
+    color: white;
+}
+i{
+    color: #f36;
+    font-size: 20px;
+    margin-left: -2px;
 }
 .right-nav ul li a .trans{
     transform: rotate(90deg);
     display: inline-block;
     margin: 8px 0px 0px -7px;
+}
+.right-nav .return-top{
+    display: block;
+    margin-top: 175px;
+    border-top: 1px solid #dddddd;
 }
 /* 手机图标 */
 .download{

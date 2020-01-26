@@ -67,11 +67,11 @@ input{
 /* 引用字体图标 */
 @font-face {
     font-family: 'iconfont';
-    src: url('iconfont.eot');
-    src: url('iconfont.eot?#iefix') format('embedded-opentype'),
-    url('iconfont.woff') format('woff'),
-    url('iconfont.ttf') format('truetype'),
-    url('iconfont.svg#iconfont') format('svg');
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg') format('svg');
 }
 /*定义使用iconfont的样式*/
 .iconfont{

@@ -81,10 +81,10 @@
 }
 .title-nav{
     border-bottom: 1px solid #dedede;
-    height: 32px;
-}
-.title-nav .main-nav{
-
+    height: 40px;
+    line-height: 40px;
+    /* 必须加上，靠块级元素铺满，当处于固定定位时，会自动转换成行内块元素，宽度变为由内容撑开 */
+    width: 100%;
 }
 .title-nav .main-nav ul{
 }
