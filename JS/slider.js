@@ -26,21 +26,25 @@ let pictureWidth=pictures.offsetWidth;
 let stop_pos;
 function autoPlay(){
     moveRight(autoSpeed);
-    // if(list.offsetLeft==stop_pos-autoSpeed){
-    //     index++;
-    //     btn_Index();
-    // }
-    console.log("当前视窗在图片条中的位置为"+Math.abs(list.offsetLeft));
+    console.log(list.offsetLeft);
+    if(Math.abs(list.offsetLeft)%pictureWidth===autoSpeed){
+        index++;
+        if(list.offsetLeft===-7250){
+            index=0;
+        }
+        btn_Index();
+    }
+    // console.log("当前视窗在图片条中的位置为"+Math.abs(list.offsetLeft));
     if(isStop()){
         stop_pos=list.offsetLeft;
         console.log(stop_pos);
         changeTime=3000;
         //图片位置向右一张
-        index++;
-        btn_Index();
+        // index++;
+        // btn_Index();
         if(isLastImage()){
             returnFirstImage();
-            btn_Index();
+            // btn_Index();
         }
         console.log("停顿点");
     }
@@ -62,6 +66,7 @@ function isStop(){
 }
 function isLastImage(){
     if(list.offsetLeft==-(listWidth-pictureWidth)){
+        // console.log("最后一张图片");
         return true;
     }
     else{
@@ -84,10 +89,12 @@ function returnLastImage(){
 //返回展示的第一张图片位置
 function returnFirstImage(){
     list.style.left=-pictureWidth+"px";
-    index=0;   
+    index=0;
+    // btn_Index();   
 }
 //将图片位置与高亮按钮对应
 function btn_Index(){
+    console.log("定位按钮");
     //将整个图片列表向左移动一张图片的宽度，将下一张图片暴露在视窗,上一张图片被隐藏
         for(let i=0;i<allPictures.length-2;i++){
             if(i!=index){
