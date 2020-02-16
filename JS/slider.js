@@ -24,6 +24,7 @@ let listWidth=list.offsetWidth;
 let pictureWidth=pictures.offsetWidth;
 // 保存停顿时的位置
 let stop_pos;
+let isPlay;
 function autoPlay(){
     // 轮播减速处理
     reduceSpeedR();
@@ -56,13 +57,11 @@ function isStop(){
         return true;
     }
     else{
-        // changeTime=3;
         return false;
     }
 }
 function isLastImage(){
     if(list.offsetLeft==-(listWidth-pictureWidth)){
-        // console.log("最后一张图片");
         return true;
     }
     else{
@@ -196,206 +195,68 @@ function moveNextImage(){
     }
     timer2=setTimeout(moveNextImage,changeTimer2);
 }
-//移动到的第一张图片的实现过程
-function moveIndexImage1(){
-    indexOffsetLeft=-pictureWidth;
-    if(list.offsetLeft-100===indexOffsetLeft||list.offsetLeft===-(pictureWidth)-100){
-        btnMoveSpeed=5;
-    }
-    if(indexOffsetLeft>list.offsetLeft){
-        moveLeft(btnMoveSpeed);
-    }
-    else{
-        moveRight(btnMoveSpeed);
-    }
-    console.log(list.offsetLeft);
-    if(list.offsetLeft==indexOffsetLeft){
-        btnMoveSpeed=100;
-        clearTimeout(timer2);
-        return ;
-    }
-    timer2=setTimeout(moveIndexImage1,4);
-}
-//移动到的第二张图片的实现过程
-function moveIndexImage2(){
-    indexOffsetLeft=-(pictureWidth*2);
-    if(list.offsetLeft-100===indexOffsetLeft||list.offsetLeft===-(pictureWidth*2)-100){
-        btnMoveSpeed=5;
-    }
-    if(indexOffsetLeft>list.offsetLeft){
-        moveLeft(btnMoveSpeed);
-    }
-    else{
-        moveRight(btnMoveSpeed);
-    }
-    console.log(list.offsetLeft);
-    if(list.offsetLeft==indexOffsetLeft){
-        btnMoveSpeed=100;
-        clearTimeout(timer2);
-        return ;
-    }
-    timer2=setTimeout(moveIndexImage2,4);
-}
-//移动到的第三张图片的实现过程
-function moveIndexImage3(){
-    indexOffsetLeft=-(pictureWidth*3);
-    if(list.offsetLeft-100===indexOffsetLeft||list.offsetLeft===-(pictureWidth*3)-100){
-        btnMoveSpeed=5;
-    }
-    if(indexOffsetLeft>list.offsetLeft){
-        moveLeft(btnMoveSpeed);
-    }
-    else{
-        moveRight(btnMoveSpeed);
-    }
-    console.log(list.offsetLeft);
-    if(list.offsetLeft==indexOffsetLeft){
-        btnMoveSpeed=100;
-        clearTimeout(timer2);
-        return ;
-    }
-    timer2=setTimeout(moveIndexImage3,4);
-}
-//移动到的第四张图片的实现过程
-function moveIndexImage4(){
-    indexOffsetLeft=-(pictureWidth*4);
-    if(list.offsetLeft-100===indexOffsetLeft||list.offsetLeft===-(pictureWidth*4)-100){
-        btnMoveSpeed=5;
-    }
-    if(indexOffsetLeft>list.offsetLeft){
-        moveLeft(btnMoveSpeed);
-    }
-    else{
-        moveRight(btnMoveSpeed);
-    }
-    console.log(list.offsetLeft);
-    if(list.offsetLeft==indexOffsetLeft){
-        btnMoveSpeed=100;
-        clearTimeout(timer2);
-        return ;
-    }
-    timer2=setTimeout(moveIndexImage4,4);
-}
-//移动到的第五张图片的实现过程
-function moveIndexImage5(){
-    indexOffsetLeft=-(pictureWidth*5);
-    if(list.offsetLeft-100===indexOffsetLeft||list.offsetLeft===-(pictureWidth*5)-100){
-        btnMoveSpeed=5;
-    }
-    if(indexOffsetLeft>list.offsetLeft){
-        moveLeft(btnMoveSpeed);
-    }
-    else{
-        moveRight(btnMoveSpeed);
-    }
-    console.log(list.offsetLeft);
-    if(list.offsetLeft==indexOffsetLeft){
-        btnMoveSpeed=100;
-        clearTimeout(timer2);
-        return ;
-    }
-    timer2=setTimeout(moveIndexImage5,4);
-}
-//移动到的第六张图片的实现过程
-function moveIndexImage6(){
-    indexOffsetLeft=-(pictureWidth*6);
-    if(list.offsetLeft-100===indexOffsetLeft||list.offsetLeft===-(pictureWidth*6)-100){
-        btnMoveSpeed=5;
-    }
-    if(indexOffsetLeft>list.offsetLeft){
-        moveLeft(btnMoveSpeed);
-    }
-    else{
-        moveRight(btnMoveSpeed);
-    }
-    console.log(list.offsetLeft);
-    if(list.offsetLeft==indexOffsetLeft){
-        btnMoveSpeed=100;
-        clearTimeout(timer2);
-        return ;
-    }
-    timer2=setTimeout(moveIndexImage6,4);
-}
 //点击按钮向左移动一张图片
 back.onclick=function(){
     if(!isFirstImage()){
-        console.log("上一张展示图片");
         moveBeforeImage();
     }
 }
 //点击按钮向右移动一张图片
 next.onclick=function(){
     if(!isLastImage()){
-        console.log("下一张展示图片");
         moveNextImage();
     }
 }
-// 第一个按钮按下移动到第一张图
-btn[0].onmouseenter=function(){
-    index=0;
-    if(isStop()){
-        moveIndexImage1();
-        btn_Index();
+function moveIndexImage(){
+    indexOffsetLeft = - (pictureWidth * index);
+    if(list.offsetLeft-100===indexOffsetLeft||list.offsetLeft===-( pictureWidth * index ) - 100){
+        btnMoveSpeed=5;
     }
-}
-// 第二个按钮按下移动到第二张图
-btn[1].onmouseenter=function(){
-    index=1;
-    if(isStop()){
-        moveIndexImage2();
-        btn_Index();
+    if(indexOffsetLeft>list.offsetLeft){
+        moveLeft(btnMoveSpeed);
     }
-}
-// 第三个按钮按下移动到第三张图
-btn[2].onmouseenter=function(){
-    index=2;
-    if(isStop()){
-        moveIndexImage3();
-        btn_Index();
+    else{
+        moveRight(btnMoveSpeed);
     }
-}
-// 第四个按钮按下移动到第四张图
-btn[3].onmouseenter=function(){
-    index=3;
-    if(isStop()){
-        moveIndexImage4();
-        btn_Index();
+    console.log(list.offsetLeft);
+    if(list.offsetLeft==indexOffsetLeft){
+        btnMoveSpeed=100;
+        clearTimeout(timer2);
+        return ;
     }
+    timer2=setTimeout(moveIndexImage,4);
 }
-// 第五个按钮按下移动到第五张图
-btn[4].onmouseenter=function(){
-    index=4;
-    if(isStop()){
-        moveIndexImage5();
-        btn_Index();
-    }
-}
-btn[5].onmouseenter=function(){
-    index=5;
-    if(isStop()){
-        moveIndexImage6();
-        btn_Index();
+//指示器跟图片移动的事件绑定
+for( let i = 0 ; i < btn.length ; i++ ){
+    btn[i].onclick = function(){
+        index = i;
+        console.log(index);
+        if(isStop()){
+            moveIndexImage();
+            btn_Index();
+        }
     }
 }
 //鼠标移动到视窗，清除定时器，停止播放
 container.onmouseenter=function(){
     if(isStop()){
+        console.log('停止播放');
         clearTimeout(timer);
         clearTimeout(timer2);
     }
 }
+
 //鼠标离开视窗，调用自动轮播函数
 container.onmouseleave=function(){
     //避免短时间多次触发鼠标移入移出事件造成的定时器叠加
     //轮播动作停止后再清除定时器，避免在轮播过程鼠标移入又快速移出造成的轮播中断
     if(isStop()){
+        console.log('继续播放');
         clearTimeout(timer);
         clearTimeout(timer2);
+        timer=setTimeout(autoPlay,2000);
     }
     //重新在2s后进入autoPlay函数进行自动轮播
-    timer=setTimeout(autoPlay,2000);
-
 }
 // 进入自动轮播模式,定时器autoPlay递归
 timer=setTimeout(autoPlay,changeTime);
-// console.log(timer);
